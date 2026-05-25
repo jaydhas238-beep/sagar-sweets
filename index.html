@@ -981,6 +981,35 @@
     transform:translateY(-4px);
     background:#1EBE5D;
 }
+  .cert-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.cert-card{
+  background:white;
+  padding:28px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+
+.cert-card i{
+  font-size:2.4rem;
+  color:var(--saffron);
+  margin-bottom:12px;
+}
+
+.cert-card h3{
+  color:var(--maroon);
+}
+
+@media(max-width:768px){
+  .cert-grid{
+    grid-template-columns:1fr;
+  }
+}
 }
       
     }
@@ -1204,6 +1233,34 @@
     <div class="container">
       <div class="section-title">
         <h2>Why Choose Us?</h2>
+        <section id="certifications">
+  <div class="container">
+    <div class="section-title">
+      <h2>Certifications & Trust</h2>
+      <p>We follow quality, hygiene and food safety standards.</p>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <i class="fa-solid fa-certificate"></i>
+        <h3>FSSAI Licensed</h3>
+        <p>Food safety certified business.</p>
+      </div>
+
+      <div class="cert-card">
+        <i class="fa-solid fa-receipt"></i>
+        <h3>GST Registered</h3>
+        <p>Trusted and registered business.</p>
+      </div>
+
+      <div class="cert-card">
+        <i class="fa-solid fa-hand-sparkles"></i>
+        <h3>Hygienic Preparation</h3>
+        <p>Clean and safe food handling.</p>
+      </div>
+    </div>
+  </div>
+</section>
         <p>Quality, taste and trust in every bite.</p>
       </div>
 
