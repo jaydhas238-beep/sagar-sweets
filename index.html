@@ -812,6 +812,87 @@
   border:1px solid #ddd;
   border-radius:8px;
 }
+      .diwali-offer {
+  background: linear-gradient(135deg, #8B0000, #FF6B00);
+  color: white;
+  padding: 55px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.diwali-offer::before {
+  content: "🪔 ✨ 🪔 ✨ 🪔";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  font-size: 28px;
+  opacity: 0.35;
+  letter-spacing: 18px;
+}
+
+.diwali-offer h2 {
+  font-size: 2.8rem;
+  color: #FFD700;
+  margin-bottom: 12px;
+}
+
+.diwali-offer p {
+  font-size: 1.15rem;
+  max-width: 750px;
+  margin: 10px auto;
+}
+
+.offer-badge {
+  display: inline-block;
+  margin: 22px 0;
+  padding: 14px 28px;
+  background: #FFD700;
+  color: #8B0000;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.offer-code {
+  background: white;
+  color: #8B0000;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 800;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.diwali-btn {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 35px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.diwali-btn:hover {
+  transform: translateY(-3px);
+  background: #1ebe5d;
+}
+
+@media (max-width: 560px) {
+  .diwali-offer h2 {
+    font-size: 2rem;
+  }
+
+  .offer-badge {
+    font-size: 1.1rem;
+  }
+}
     }
 
   </style>
@@ -861,6 +942,26 @@
       </div>
     </div>
   </section>
+  section class="diwali-offer">
+  <div class="container">
+    <h2>🪔 Happy Diwali from Sagar Sweets 🪔</h2>
+    <p>Celebrate this Diwali with fresh sweets, festive gift boxes, special snacks and family packs.</p>
+
+    <div class="offer-badge">
+      Up to 40% OFF on Diwali Special Combos
+    </div>
+
+    <p>Use Offer Code:</p>
+    <div class="offer-code">DIWALI40</div>
+
+    <br>
+
+    <a href="#menu" class="diwali-btn">
+      <i class="fa-solid fa-gift"></i> Order Diwali Sweets
+    </a>
+  </div>
+</section>
+
 
   <section id="about">
     <div class="container">
