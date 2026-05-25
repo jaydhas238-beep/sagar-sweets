@@ -67,12 +67,20 @@
       justify-content: space-between;
     }
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: var(--maroon);
-    }
+    .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Playfair Display', serif;
+    font-size:1.7rem;
+    font-weight:800;
+    color:var(--maroon);
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+}
 
     .logo span {
       color: var(--saffron);
@@ -560,7 +568,10 @@
 
   <nav class="navbar">
     <div class="container nav-content">
-      <a href="#home" class="logo">Sagar <span>Sweets</span></a>
+      <a href="#home" class="logo">
+    <img src="logo.png" alt="Logo">
+    <span>Sagar Sweets</span>
+</a>
 
       <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
