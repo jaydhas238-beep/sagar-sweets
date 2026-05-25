@@ -1063,6 +1063,10 @@
       <div class="hero-buttons">
         <a href="#menu" class="primary-btn"><i class="fa-solid fa-bowl-food"></i> Explore Our Menu</a>
         <a href="https://wa.me/918956195943" target="_blank" class="secondary-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+        <a href="#booking" class="primary-btn">
+    <i class="fa-solid fa-calendar-check"></i>
+    Book Sweets for Pickup
+</a>
       </div>
     </div>
   </section>
@@ -1384,6 +1388,25 @@ target="_blank">
       </div>
     </div>
   </section>
+  <section id="booking">
+  <div class="container">
+    <div class="section-title">
+      <h2>Pre-Book Sweets for Pickup</h2>
+      <p>Book sweets in advance and collect from your nearest store.</p>
+    </div>
+
+    <input type="text" id="bookName" placeholder="Your Name">
+    <input type="tel" id="bookPhone" placeholder="Phone Number">
+    <input type="text" id="bookItems" placeholder="Required Sweets">
+
+    <input type="date" id="pickupDate">
+    <input type="time" id="pickupTime">
+
+    <button class="cart-btn" onclick="sendBooking()">
+      Confirm Booking
+    </button>
+  </div>
+</section>
 
   <section id="contact">
     <div class="container">
