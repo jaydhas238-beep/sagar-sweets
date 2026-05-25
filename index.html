@@ -1085,6 +1085,23 @@
   .booking-form{
     grid-template-columns:1fr;
   }
+  .booking-form textarea{
+  grid-column:1/-1;
+  width:100%;
+  min-height:100px;
+  padding:15px 18px;
+  border:1px solid #ffd1a3;
+  border-radius:14px;
+  font-family:'Poppins', sans-serif;
+  font-size:1rem;
+  outline:none;
+  resize:vertical;
+}
+
+.booking-form textarea:focus{
+  border-color:#FF6B00;
+  box-shadow:0 0 0 3px rgba(255,107,0,0.15);
+}
 }
 }
       
@@ -1464,14 +1481,42 @@ target="_blank">
   <div class="container">
     <div class="section-title">
       <h2>Pre-Book Sweets for Pickup</h2>
-      <p>Book your sweets in advance and collect from your nearest Sagar Sweets store.</p>
+      <p>Select sweets, quantity and pickup store. We will confirm your booking on WhatsApp.</p>
     </div>
 
     <div class="booking-card">
       <div class="booking-form">
         <input type="text" id="bookName" placeholder="Your Name">
         <input type="tel" id="bookPhone" placeholder="Phone Number">
-        <input type="text" id="bookItems" placeholder="Required Sweets e.g. 1kg Kaju Katli">
+
+        <select id="bookItem">
+          <option value="">Select Sweet / Item</option>
+          <option>Kaju Katli</option>
+          <option>Gulab Jamun</option>
+          <option>Ladoo</option>
+          <option>Barfi</option>
+          <option>Modak</option>
+          <option>Jalebi</option>
+          <option>Samosa</option>
+          <option>Paneer Sandwich</option>
+          <option>Chaat Plate</option>
+          <option>Gift Box</option>
+        </select>
+
+        <select id="bookQty">
+          <option value="">Select Quantity</option>
+          <option>250g</option>
+          <option>500g</option>
+          <option>750g</option>
+          <option>1kg</option>
+          <option>2kg</option>
+          <option>3kg</option>
+          <option>5kg or more</option>
+          <option>10 pieces</option>
+          <option>20 pieces</option>
+          <option>50 pieces</option>
+        </select>
+
         <input type="date" id="pickupDate">
         <input type="time" id="pickupTime">
 
@@ -1484,6 +1529,8 @@ target="_blank">
           <option>Dwarka</option>
         </select>
 
+        <textarea id="bookNote" placeholder="Extra note e.g. less sugar, gift packing, festival order"></textarea>
+
         <button class="booking-btn" onclick="sendBooking()">
           <i class="fa-brands fa-whatsapp"></i>
           Confirm Booking on WhatsApp
@@ -1491,7 +1538,7 @@ target="_blank">
       </div>
 
       <p class="booking-note">
-        Your booking request will be sent to our team for confirmation.
+        Your booking request will be sent to our team. Final price and availability will be confirmed on WhatsApp.
       </p>
     </div>
   </div>
@@ -1730,6 +1777,30 @@ const storeName = storeSelect.options[storeSelect.selectedIndex].text;
         document.getElementById("navLinks").classList.remove("active");
       });
     });
+    <script>
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+    });
+});
+
+function sendBooking(){
+
+  const name = document.getElementById("bookName").value;
+  const phone = document.getElementById("bookPhone").value;
+
+  alert("Booking function working");
+
+}
+
+</script>
   </script>
 
 </body>
