@@ -1246,6 +1246,14 @@ target="_blank">
     <input type="text" id="custName" placeholder="Your Name">
     <input type="tel" id="custPhone" placeholder="Phone Number">
     <textarea id="custAddress" placeholder="Delivery / Pickup Address"></textarea>
+    
+    <select id="nearestStore">
+  <option value="919922090758">Main Store - Gangapur Road</option>
+  <option value="919922090758">Canada Corner</option>
+  <option value="919922090758">Govind Nagar</option>
+  <option value="919922090758">Ashoka Marg</option>
+  <option value="919922090758">Dwarka</option>
+</select>
 
     <select id="paymentMode">
       <option value="Cash on Delivery">Cash on Delivery</option>
@@ -1333,6 +1341,9 @@ target="_blank">
       const phone = document.getElementById("custPhone").value.trim();
       const address = document.getElementById("custAddress").value.trim();
       const payment = document.getElementById("paymentMode").value;
+      const storeSelect = document.getElementById("nearestStore");
+const storePhone = storeSelect.value;
+const storeName = storeSelect.options[storeSelect.selectedIndex].text;
 
       if (!name || !phone || !address) {
         alert("Please fill your name, phone number and address.");
@@ -1356,7 +1367,7 @@ target="_blank">
       message += "%0AAddress: " + encodeURIComponent(address);
       message += "%0A%0APlease confirm availability and delivery/pickup time.";
 
-      window.open("https://wa.me/918956195943?text=" + message, "_blank");
+      window.open("https://wa.me/" + storePhone + "?text=" + message, "_blank");
     }
   </script>
 
